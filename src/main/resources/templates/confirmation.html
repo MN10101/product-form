@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f9f9f9; /* Modern background color */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: linear-gradient(to right bottom, #6dd5ed, #71c9f7);
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 500px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Order Confirmation</h2>
+    <div class="mt-3">
+        <p class="lead">Product Name: <span th:text="${product.productName}"></span></p>
+        <br><br>
+        <p>Product Quantity: <span th:text="${product.quantity}"></span></p>
+        <br><br>
+        <p>Product Size: <span th:text="${product.size}"></span></p>
+        <br><br>
+        <p>Product Color: <span th:text="${product.colors}"></span></p>
+        <br><br>
+        <p>Shipping Method: <span th:text="${product.shippingMethod}"></span></p>
+    </div>
+</div>
+</body>
+</html>
